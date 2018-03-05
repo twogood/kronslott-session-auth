@@ -36,5 +36,4 @@ This project is not yet available from Maven Central Repository, but it's
 available via
 [JitPack.io](https://jitpack.io/#se.activout/kronslott-session-auth).
 
-[![Release](https://jitpack.io/v/se.activout/kronslott-session-auth.svg)]
-(https://jitpack.io/#se.activout/kronslott-session-auth)
+[![Release](https://jitpack.io/v/se.activout/kronslott-session-auth.svg)](https://jitpack.io/#se.activout/kronslott-session-auth)
