@@ -47,7 +47,7 @@ class TestConfiguration : Configuration(), SessionAuthConfig {
 @Produces(MediaType.APPLICATION_JSON + "; charset=UTF-8")
 class TestResource {
     @POST
-    @Path("login")
+    @Path("session")
     fun login(@Context httpServletRequest: HttpServletRequest, user: TestUser): TestUser {
         SessionUserHelper.createSession(httpServletRequest, user)
         return user;
@@ -119,7 +119,7 @@ class IntegrationTest {
 
     private fun login(client: Client) {
         val response = client.target(
-                url("login"))
+                url("session"))
                 .request()
                 .post(Entity.json(TestUser()))
         assertThat(response.status).isEqualTo(200)
