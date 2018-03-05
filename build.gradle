@@ -1,7 +1,7 @@
 buildscript {
     ext.kotlin_version = '1.2.30'
     ext.dropwizard_version = '1.2.4'
-    ext.junitJupiterVersion = '5.1.0'
+    ext.junit_version = '4.12'
 
     repositories {
         mavenCentral()
@@ -27,8 +27,10 @@ dependencies {
     api "io.dropwizard:dropwizard-core:$dropwizard_version"
     api "io.dropwizard:dropwizard-auth:$dropwizard_version"
 
-    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion"
-    testImplementation "org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion"
+    testImplementation "io.dropwizard:dropwizard-testing:$dropwizard_version"
+    testImplementation "io.dropwizard:dropwizard-client:$dropwizard_version"
+
+    testImplementation "junit:junit:$junit_version"
     testImplementation "org.mockito:mockito-core:1.8.5"
     testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-alpha03'
 }
